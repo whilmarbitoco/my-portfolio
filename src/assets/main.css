@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --font-color: #120d4d;
+  --bg-color: #fff;
+  --main-color: #fb674b;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--font-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* @media screen and (max-width: 500px) {
+    body {
+        overflow: hidden;
+    }
+} */
