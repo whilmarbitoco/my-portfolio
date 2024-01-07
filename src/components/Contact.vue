@@ -7,56 +7,59 @@
           <img src="../assets/svg/contact.svg" />
         </section>
         <section v-motion-slide-visible-left class="sec-form">
-          <FormKit type="form" id="myForm" @submit="formHandle">
-            <FormKit
+          <form @submit.prevent="formHandle">
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              placeholder="Name"
+              v-model="name"
+              required
+            />
+            <input
               type="email"
-              label="Email Address"
-              help="Please enter your email address."
-              validation="required|email"
-              placeholder="johndoe@example.com"
+              name="email"
+              id="email"
+              placeholder="Email"
+              v-model="email"
+              required
             />
-            <FormKit
+            <input
               type="text"
-              label="Full Name"
-              help="Please enter your name"
-              validation="required"
-              placeholder="John Doe"
+              name="body"
+              id="body"
+              placeholder="Message"
+              v-model="body"
+              required
             />
-            <FormKit
-              type="text"
-              label="Subject"
-              help="Please enter your name"
-              validation="required"
-              placeholder="Business Proposal"
-            />
-            <FormKit
-              type="textarea"
-              label="Message"
-              help="Please Enter Your Message"
-              validation="required"
-              placeholder="Your Message"
-            />
-          </FormKit>
+            <button class="btn-submit btn-main" type="submit">Submit</button>
+          </form>
         </section>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-import { FormKit } from '@formkit/vue'
+<script setup>
+import { ref } from "vue";
 
-export default {
-  name: 'Contact',
-  methods: {
-    formHandle(e) {
-      // e.preventDefault();
-      console.log(e)
-      this.$formkit.reset('myForm')
-    },
-  },
-  components: { FormKit },
-}
+const name = ref("");
+const email = ref("");
+const body = ref("");
+
+const formHandle = () => {
+  const formData = {
+    name: name.value,
+    email: email.value,
+    body: body.value,
+  };
+
+  console.log(formData);
+
+  name.value = "";
+  email.value = "";
+  body.value = "";
+};
 </script>
 
 <style scoped>
@@ -96,33 +99,31 @@ section {
   position: relative;
 }
 
-#myForm {
-  width: 100%;
-  padding: 25px;
-}
-
 img {
   width: 80%;
 }
 
-/*  testtt */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 70%;
+}
 
-/*  Responsive */
-@media screen and (max-width: 500px) {
-  h2 {
-    font-size: 17px;
-  }
+input {
+  height: 40px;
+  font-size: 15px;
+  padding-left: 5px;
+  outline: none;
+  border: none;
+  border-bottom: 1px #00000059 solid;
+}
 
-  .cntct-me {
-    display: none;
-  }
+input:focus {
+  border-bottom: solid 1px var(--main-color);
+}
 
-  section {
-    width: 100%;
-  }
-
-  .form {
-    width: 85%;
-  }
+.btn-submit {
+  margin-top: 20px;
 }
 </style>

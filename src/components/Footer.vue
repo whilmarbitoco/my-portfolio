@@ -61,6 +61,10 @@ const links = useSocialStore();
   padding-left: 2rem;
 }
 
+.links {
+  text-transform: uppercase;
+}
+
 .logo {
   display: flex;
   align-items: center;

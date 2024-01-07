@@ -9,25 +9,13 @@
   </div>
 </template>
 
-<script>
-import Home from './components/Home.vue'
-import Infos from './components/Infos.vue'
-import About from './components/About.vue'
-import Projects from './components/Projects.vue'
-import Contact from './components/Contact.vue'
-import Footer from './components/Footer.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Home,
-    Infos,
-    About,
-    Projects,
-    Contact,
-    Footer,
-  },
-}
+<script setup>
+import Home from "./components/Home.vue";
+import Infos from "./components/Infos.vue";
+import About from "./components/About.vue";
+import Projects from "./components/Projects.vue";
+import Contact from "./components/Contact.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <style>
@@ -58,10 +46,7 @@ export default {
   background-color: var(--main-color);
   border-color: var(--main-color);
   color: var(--bg-color);
-  transition:
-    background-color 0.5s,
-    color 0.3s,
-    border-color 0.5s;
+  transition: background-color 0.5s, color 0.3s, border-color 0.5s;
 }
 
 .btn-main:hover {
@@ -74,10 +59,7 @@ export default {
   color: var(--main-color);
   background: var(--bg-color);
   border-color: var(--main-color);
-  transition:
-    background-color 0.5s,
-    color 0.3s,
-    border-color 0.5s;
+  transition: background-color 0.5s, color 0.3s, border-color 0.5s;
 }
 
 .btn-secondary:hover {
