@@ -6,7 +6,7 @@
       how to code.
     </p>
     <div class="card-list">
-      <carousel :items-to-show="3" :transition="500">
+      <carousel :items-to-show="renderCount" :transition="500">
         <slide v-for="list in lists.projects" :key="list.id">
           <Card
             v-motion-slide-visible-left
@@ -34,6 +34,8 @@ import { useProjectStore } from "../store/projectStore.js";
 // import { ref } from 'vue'
 
 const lists = useProjectStore();
+const renderCount = window.innerWidth <= 500 ? 1 : 3;
+console.log(renderCount);
 </script>
 
 <style scoped>
@@ -66,15 +68,5 @@ h2 {
 
 /*  Responsive */
 @media screen and (max-width: 500px) {
-  h2 {
-    font-size: 20px;
-  }
-  .descrptn {
-    font-size: 14px;
-  }
-
-  .card-list {
-    flex-direction: column;
-  }
 }
 </style>

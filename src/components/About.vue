@@ -111,20 +111,29 @@ a {
 
 /*  Responsive */
 @media screen and (max-width: 500px) {
-  h2 {
-    font-size: 20px;
-  }
-
-  .abt-me {
-    display: none;
+  .sections {
+    flex-direction: column;
   }
 
   section {
     width: 100%;
   }
 
+  .img-icon {
+    width: 400px;
+    height: 350px;
+  }
+
+  .abt-me {
+    font-size: 14px;
+  }
+
   .name {
-    font-size: 2rem;
+    font-size: 2.3rem;
+  }
+
+  h2 {
+    font-size: 23px;
   }
 }
 </style>

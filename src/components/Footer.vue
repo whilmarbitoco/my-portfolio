@@ -63,6 +63,9 @@ const links = useSocialStore();
 
 .links {
   text-transform: uppercase;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0.3rem;
 }
 
 .logo {

@@ -126,4 +126,18 @@ input:focus {
 .btn-submit {
   margin-top: 20px;
 }
+
+@media screen and (max-width: 500px) {
+  .sections {
+    flex-direction: column;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  form {
+    width: 80%;
+  }
+}
 </style>

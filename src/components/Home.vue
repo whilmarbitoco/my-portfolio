@@ -31,50 +31,50 @@
 </template>
 
 <script>
-import NavBar from './NavBar.vue'
+import NavBar from "./NavBar.vue";
 // import MobileNav from './MobileNav.vue'
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     NavBar,
     // MobileNav,
   },
   data() {
     return {
-      name: '',
-      type: 'Whilmar Bitoco',
+      name: "",
+      type: "Whilmar Bitoco",
       speed: 100,
-    }
+    };
   },
   methods: {
     btn() {
-      window.location.href = '#contact'
+      window.location.href = "#contact";
     },
     startTyping() {
-      let index = 0
+      let index = 0;
       const typeNextCharacter = () => {
         if (index < this.type.length) {
-          this.name += this.type[index]
-          index++
-          setTimeout(typeNextCharacter, this.speed)
+          this.name += this.type[index];
+          index++;
+          setTimeout(typeNextCharacter, this.speed);
         } else {
-          this.clearAndRestart()
+          this.clearAndRestart();
         }
-      }
-      typeNextCharacter()
+      };
+      typeNextCharacter();
     },
     clearAndRestart() {
       setTimeout(() => {
-        this.name = ''
-        this.startTyping()
-      }, 10000)
+        this.name = "";
+        this.startTyping();
+      }, 10000);
     },
   },
   created() {
-    this.startTyping()
+    this.startTyping();
   },
-}
+};
 </script>
 
 <style scoped>
@@ -150,6 +150,24 @@ h2 span {
 
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    flex-direction: column-reverse;
+  }
+  .section-1,
+  .section-2 {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 15px;
   }
 }
 </style>
