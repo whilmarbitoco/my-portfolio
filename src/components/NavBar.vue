@@ -1,9 +1,9 @@
 <template>
   <div class="navbar wrapper">
-    <div class="logo">
+    <a href="/" class="logo">
       <img src="../assets/svg/logo.svg" />
       <h1>W<span>B</span></h1>
-    </div>
+    </a>
 
     <button @click="toggleMenu" class="menu-icon">&#9776;</button>
 
@@ -76,14 +76,14 @@ export default {
 
 .link {
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--font-color);
   cursor: pointer;
 }
 
-.link:hover {
+/* .link:hover {
   border-bottom: #000 solid 1px;
-}
+} */
 
 .menu-icon {
   display: none;

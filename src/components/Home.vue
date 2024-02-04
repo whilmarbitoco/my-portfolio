@@ -108,13 +108,18 @@ h2 {
 h2 span {
   background: #fff;
   padding: 0 10px;
+  font-weight: 400;
 }
 
 .description {
-  font-size: 17px;
   line-height: 1;
   padding: 10px;
   margin-left: 10px;
+}
+
+.description p {
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .actions {
@@ -126,6 +131,7 @@ h2 span {
 
 .name {
   font-size: 4rem;
+  font-weight: 600;
   color: var(--main-color);
 }
 

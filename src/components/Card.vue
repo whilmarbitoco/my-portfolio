@@ -2,15 +2,14 @@
   <div class="card">
     <img src="../assets/project.png" class="img-card" />
     <h3 class="card-name">{{ project }}</h3>
-    <div class="card-description">
-      {{ description }}
-    </div>
-
     <ul class="langs">
       <li v-for="item in langs" :key="item.id" class="lang">
         {{ item.text }}
       </li>
     </ul>
+    <div class="card-description">
+      {{ description }}
+    </div>
     <a href="#" class="git-link">
       <i class="fa-brands fa-github"></i>
     </a>
@@ -19,14 +18,14 @@
 
 <script>
 export default {
-  name: 'Card',
+  name: "Card",
   props: {
     project: String,
     description: String,
     github: String,
     langs: Array,
   },
-}
+};
 </script>
 
 <style scoped>
@@ -44,9 +43,7 @@ export default {
   position: relative;
   border-radius: 34px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow:
-    11px 11px 22px #acacac,
-    -11px -11px 22px #ffffff;
+  box-shadow: 11px 11px 22px #acacac, -11px -11px 22px #ffffff;
 }
 
 .img-card {
@@ -54,8 +51,8 @@ export default {
 }
 
 .card-name {
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 600;
   padding-top: 5px;
   align-self: flex-start;
 }
@@ -64,6 +61,7 @@ export default {
   display: flex;
   gap: 0.5rem;
   align-self: flex-start;
+  margin: 5px 0;
 }
 
 .lang {
@@ -80,9 +78,10 @@ export default {
 }
 
 .card-description {
+  text-align: start;
   font-size: 14px;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1;
   padding: 8px;
   padding-top: 5px;
 }

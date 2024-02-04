@@ -60,7 +60,7 @@ h2 {
 .name {
   font-size: 2.5rem;
   font-style: bold;
-  font-weight: 900;
+  font-weight: 600;
   align-self: flex-start;
   margin-bottom: 10px;
 }

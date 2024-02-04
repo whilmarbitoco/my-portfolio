@@ -44,8 +44,8 @@
 
 <script>
 export default {
-  name: 'Infos',
-}
+  name: "Infos",
+};
 </script>
 
 <style scoped>
@@ -70,7 +70,7 @@ h2 {
 
 .description {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 2rem;
 }
 

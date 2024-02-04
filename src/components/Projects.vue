@@ -53,6 +53,10 @@ h2 {
   width: 30%;
 }
 
+.descrptn {
+  font-weight: 300;
+}
+
 .projects {
   height: auto;
   display: flex;
